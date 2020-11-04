@@ -1,0 +1,9 @@
+[submodule "linux-surface/firmware/surface-ipts-firmware"]
+	path = linux-surface/firmware/surface-ipts-firmware
+	url = https://github.com/linux-surface/surface-ipts-firmware
+[submodule "linux-surface/kernel/linux-surface"]
+	path = linux-surface/kernel/linux-surface
+	url = https://github.com/linux-surface/linux-surface
+[submodule "linux-surface/libwacom/libwacom-surface"]
+	path = linux-surface/libwacom/libwacom-surface
+	url = https://github.com/linux-surface/libwacom-surface
