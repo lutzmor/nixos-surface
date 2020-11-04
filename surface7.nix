@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./surface/kernel/kernel_5_9.nix
-    ./surface/surface.nix
+    ./linux-surface/kernel/kernel_5_9.nix
+    ./linux-surface/surface.nix
   ];
   
   boot = {
