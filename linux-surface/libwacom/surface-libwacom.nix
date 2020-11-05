@@ -1,6 +1,6 @@
 {stdenv, fetchurl, glib, pkgconfig, udev, libgudev, meson, libtool, libxml2, ninja, doxygen}:
 stdenv.mkDerivation rec {
-  name = "libwacom-surface-${version}";
+  pname = "libwacom-surface-${version}";
   version = "1.3";
 
   src = fetchurl {
