@@ -1,6 +1,6 @@
 {stdenv, fetchurl, rustPlatform}:
 rustPlatform.buildRustPackage rec {
-  name = "surface-control-${version}";
+  pname = "surface-control-${version}";
   version = "0.3.0-1";
   src = fetchurl {
     url = "https://github.com/qzed/linux-surface-control/archive/v${version}.tar.gz";
