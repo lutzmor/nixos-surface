@@ -13,5 +13,5 @@
   
   hardware.firmware = [ pkgs.surface_firmware ];
   services.udev.packages = [ pkgs.surface_firmware ];
-  services.surface-iptsd-daemon.enable = true;
+  services.iptsd.enable = true;
 }
