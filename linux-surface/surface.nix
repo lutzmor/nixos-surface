@@ -8,10 +8,10 @@
   	libinput = super.callPackage ./libinput/libinput-1.15.0.nix {};
     	surface-control = super.callPackage ./control/surface-control.nix {};
 	surface_firmware = super.callPackage ./firmware/surface-firmware.nix {};
-	surface-iptsd-daemon = super.callPackage ./daemon/iptsd/surface-iptsd-daemon.nix {};
+	iptsd = super.callPackage ./daemon/iptsd/surface-iptsd-daemon.nix {};
   })];
   
   hardware.firmware = [ pkgs.surface_firmware ];
   services.udev.packages = [ pkgs.surface_firmware ];
-  services.surface-iptsd-daemon.enable = true;
+  services.iptsd.enable = true;
 }
