@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.services.surface-iptsd-daemon;
+  cfg = config.services.iptsd;
   configFile = pkgs.writeText "/etc/ipts.conf" ''
     [Device]
     Vendor = 0x045E
@@ -19,12 +19,12 @@ let
 in
 {
   options = {
-    services.surface-iptsd-daemon = {
+    services.iptsd = {
       enable = mkEnableOption "Surface iptsd Daemon";
     };
   };
   config = mkIf cfg.enable {
-    systemd.services.surface-iptsd-daemon = {
+    systemd.services.iptsd = {
       wantedBy = [ "multi-user.target" ];
       path = [ pkgs.surface-iptsd-daemon pkgs.utillinux pkgs.bash ];
       script = "iptsd";
