@@ -17,8 +17,6 @@
 
   services = {
 	udev.packages = [ pkgs.surface_firmware ];
-	surface-iptsd-daemon = {
-	  enable = true;
-	};
+	surface-iptsd-daemon.enable = true;
   };
 }
