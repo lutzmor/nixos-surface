@@ -11,12 +11,7 @@
 	surface-iptsd-daemon = super.callPackage ./daemon/iptsd/surface-iptsd-daemon.nix {};
   })];
   
-  hardware = {
-  	firmware = [ pkgs.surface_firmware ];
-  };
-
-  services = {
-	udev.packages = [ pkgs.surface_firmware ];
-	surface-iptsd-daemon.enable = true;
-  };
+  hardware.firmware = [ pkgs.surface_firmware ];
+  services.udev.packages = [ pkgs.surface_firmware ];
+  services.surface-iptsd-daemon.enable = true;
 }
