@@ -1,6 +1,6 @@
 {stdenv,  unzip, kmod}:
 stdenv.mkDerivation rec {
-  pname = "surface_firmware";
+  name = "surface_firmware";
   src = ./surface-ipts-firmware;
   buildPhase = "";
   installPhase = ''
