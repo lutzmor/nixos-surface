@@ -1,7 +1,7 @@
 let
   pkgs = import <nixpkgs> {}; 
 in pkgs.stdenv.mkDerivation {
-  pname = "surface-iptsd-daemon";
+  pname = "iptsd";
   version = "v0.2.1";
   src = pkgs.fetchFromGitHub {
     owner = "linux-surface";
