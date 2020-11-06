@@ -26,10 +26,10 @@ in
   config = mkIf cfg.enable {
     systemd.services.iptsd = {
       wantedBy = [ "multi-user.target" ];
-      path = [ pkgs.surface-iptsd-daemon pkgs.utillinux pkgs.bash ];
+      path = [ pkgs.iptsd pkgs.utillinux pkgs.bash ];
       script = "iptsd";
     };
-    services.udev.packages = [ pkgs.surface-iptsd-daemon ];
-    systemd.packages = [ pkgs.surface-iptsd-daemon ];
+    services.udev.packages = [ pkgs.iptsd ];
+    systemd.packages = [ pkgs.iptsd ];
   };
 }
